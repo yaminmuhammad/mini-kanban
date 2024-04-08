@@ -8,7 +8,7 @@ import { StyleSheetManager } from 'styled-components'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <Suspense fallback={<div>Loading...</div>}>
     <BrowserRouter>
-      <StyleSheetManager>
+      <StyleSheetManager shouldForwardProp={(prop)=>prop !== "shake"}>
         <App />
       </StyleSheetManager>
     </BrowserRouter>

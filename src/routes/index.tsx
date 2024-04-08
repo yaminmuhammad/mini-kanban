@@ -4,7 +4,7 @@ import Boards from "../pages/Boards";
 
 const routes: RouteObject[] = [
   {
-    path: "'",
+    path: "/",
     element: <Layout />,
     children : [
       {

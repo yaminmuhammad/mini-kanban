@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react'
-import { DragDropContext } from 'react-beautiful-dnd'
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import { Columns } from '../../types';
+import Task from '../../components/Task';
+import { AddOutline } from 'react-ionicons';
+import AddModal from '../../components/Modals/AddModal';
+import { onDragEnd } from "../../helpers/onDragEnd";
+import { Board } from '../../data/board';
 
 const Boards = () => {
   const [columns, setColumns] = useState<Columns>(Board);
